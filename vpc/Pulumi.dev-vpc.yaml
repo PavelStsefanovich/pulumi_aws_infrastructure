@@ -1,0 +1,7 @@
+encryptionsalt: v1:SutFM3WdgQI=:v1:v6oJ0BnXXFRs/Ue3:dVtUJhfqU0C8nSNE8tU04cUWXERSyw==
+config:
+  aws:region: us-east-1
+  aws:defaultTags:
+    tags:
+      environment: dev
+      iac: pulumi

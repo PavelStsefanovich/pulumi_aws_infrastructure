@@ -1,0 +1,7 @@
+name: vpc
+runtime: python
+# runtime:
+#   name: python
+#   options:
+#     virtualenv: venv
+description: 'env.DEV: VPC'
