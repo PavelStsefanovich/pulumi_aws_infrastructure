@@ -1,14 +1,15 @@
-"""An AWS Python Pulumi program"""
 import pulumi
 # import pulumi_aws as aws
 import pulumi_awsx as awsx
 
 
 config = pulumi.Config()
-vpc_base_name = config.get("vpc_base_name", "dev-vpc")
+environment             = config.require("environment")
+vpc_base_name           = config.get("vpc_base_name", "vpc")
+vpc_full_name           = f"{environment}-{vpc_base_name}"
 
 
-vpc = awsx.ec2.Vpc(vpc_base_name,
+vpc = awsx.ec2.Vpc(vpc_full_name,
         number_of_availability_zones=2, #NOTE Reduce to save on cost; Min: 2
         cidr_block="172.16.0.0/20", #NOTE Set custom CIDR block; Default: 10.0.0.0/16
         # subnet_specs=[ #NOTE Enable to override defaults; Default: 1 public + 1 private subnet per availability zone
