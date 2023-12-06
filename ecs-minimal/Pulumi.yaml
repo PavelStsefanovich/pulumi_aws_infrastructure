@@ -1,0 +1,7 @@
+name: ecs-minimal
+runtime: python
+# runtime:
+#   name: python
+#   options:
+#     virtualenv: venv
+description: 'env.DEV: ECS Minimal'

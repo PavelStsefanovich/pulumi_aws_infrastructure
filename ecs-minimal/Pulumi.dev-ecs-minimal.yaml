@@ -1,0 +1,12 @@
+encryptionsalt: v1:GGOeK1MLSQs=:v1:6ttv84wKvLZ0OdDb:VHVtFpK7wbFbiTTziy+RDeG2XIcLyg==
+config:
+  aws:defaultTags:
+    tags:
+      environment: dev
+      iac: pulumi
+  aws:region: us-east-1
+  ecs-minimal:cluster_base_name: ecs-minimal
+  ecs-minimal:containerPort: "5000"
+  ecs-minimal:environment: dev
+  ecs-minimal:image: 224433679573.dkr.ecr.us-east-1.amazonaws.com/flask-dev:latest
+  ecs-minimal:task_definition_name: dev-flask-td
